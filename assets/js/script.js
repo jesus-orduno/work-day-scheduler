@@ -32,4 +32,20 @@ function checkTime() {
   })
 };
 
+function getStorage() {
+  $(".timeBlock").each(function () {
+    var textBoxId = $(this).attr("id");
+    var textBoxValue = localStorage.getItem(textBoxId);
+    $(this).val(textBoxValue);
+  })
+};
 
+saveBtn.on("click", function () {
+  var textBoxId = $(this).siblings(".time-block").attr("id");
+  var textBoxValue = $(this).siblings(".time-block").val();
+  localStorage.setItem(textBoxId, textBoxValue);
+});
+
+getStorage();
+updateDate();
+checkTime();
