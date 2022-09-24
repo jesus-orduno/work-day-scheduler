@@ -10,9 +10,9 @@ function updateDate() {
 
 function checkTime() {
   var currentTime = moment().set({
-    minute: 0,
-    second: 0,
-    millisecond: 0,
+    "minute": "0",
+    "second": "0",
+    "millisecond": "0"
   });
 
   console.log(currentTime);
@@ -20,14 +20,14 @@ function checkTime() {
   $(".row").each(function () {
     var blockText = $(this).children(".hour").text();
 
-    var timeBlock = moment(timeBlockText, "hA");
+    var timeBlock = moment(blockText, "hA");
     
     if (timeBlock.isBefore(currentTime)) {
-      $(this).children(".time-block").addClass("past");
+      $(this).children(".time-block").addClass(".past");
     } else if (timeBlock.isAfter(currentTime)) {
-      $(this).children(".time-block").addClass("future");
+      $(this).children(".time-block").addClass(".future");
     } else {
-      $(this).children(".time-block").addClass("present");
+      $(this).children(".time-block").addClass(".present");
     }
   })
 };
