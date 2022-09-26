@@ -23,17 +23,17 @@ function checkTime() {
     var timeBlock = moment(blockText, "hA");
     
     if (timeBlock.isBefore(currentTime)) {
-      $(this).children(".time-block").addClass(".past");
+      $(this).children(".time-block").addClass("past");
     } else if (timeBlock.isAfter(currentTime)) {
-      $(this).children(".time-block").addClass(".future");
+      $(this).children(".time-block").addClass("future");
     } else {
-      $(this).children(".time-block").addClass(".present");
+      $(this).children(".time-block").addClass("present");
     }
   })
 };
 
 function getStorage() {
-  $(".timeBlock").each(function () {
+  $(".time-block").each(function () {
     var textBoxId = $(this).attr("id");
     var textBoxValue = localStorage.getItem(textBoxId);
     $(this).val(textBoxValue);
