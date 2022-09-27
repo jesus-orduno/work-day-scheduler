@@ -19,8 +19,10 @@ function checkTime() {
 
   $(".row").each(function () {
     var blockText = $(this).children(".hour").text();
+    console.log(blockText);
 
     var timeBlock = moment(blockText, "hA");
+    console.log(timeBlock);
     
     if (timeBlock.isBefore(currentTime)) {
       $(this).children(".time-block").addClass("past");
