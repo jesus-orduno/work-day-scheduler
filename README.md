@@ -34,8 +34,8 @@ THEN the saved events persist
 
 ## Application Recording
 
-![orduno-work-day-scheduler-recording](#)
+![orduno-work-day-scheduler-recording](/assets/images/jesus-orduno_work-day-scheduler_screenshot.png)
 
 ## Link to Deployed Application
 
-[Page published here](#)
+[Page published here](https://jesus-orduno.github.io/work-day-scheduler/)
